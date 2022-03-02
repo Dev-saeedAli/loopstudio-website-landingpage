@@ -1,0 +1,225 @@
+
+
+$Black: hsl(0, 0%, 0%);
+$Dark-Gray: hsl(0, 0%, 55%);
+$Very-Dark-Gray: hsl(0, 0%, 41%);
+$font-primary: 'Alata', sans-serif;
+$font-secondary:'Josefin Sans', sans-serif;
+
+
+// Article //
+.article_wrapper{
+    margin: 30px 12%;
+
+    .article-heading{
+        @include flexCenter;
+        justify-content: space-between;
+
+        h2{
+            font-size: 1.90rem;
+            font-family: $font-secondary;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            @include mq(500px){
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .btn{
+        background: none;
+        border: 1px solid black;
+        padding: 15px 20px;
+        border-radius: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: .80rem;
+        font-weight: 500;
+        font-family: $font-secondary;
+        letter-spacing: 1.4px;
+        transition:  all .3s ease;
+        cursor: pointer;
+
+        @include mq(500px){
+           font-size: .5rem;
+        }
+
+        &:hover{
+            background: $Black;
+            color:white;
+        }
+    }
+
+    .article-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 30px 0px;
+
+        .article-items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            cursor: pointer;
+
+            h3{
+                color:white;
+                font-size: 1.40rem;
+                opacity: .8;
+                font-family: $font-secondary;
+                font-weight: 200;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                padding-bottom: 10px;
+                line-height: 1.2;
+            }
+            
+        }
+
+
+        .article-items:nth-child(1){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-deep-earth.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-deep-earth.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+            &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-deep-earth.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-deep-earth.jpg) no-repeat top center/ cover;
+                    min-height: 150px;
+                }
+            }
+        }
+        .article-items:nth-child(2){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-night-arcade.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-night-arcade.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-night-arcade.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-night-arcade.jpg) no-repeat top center/ cover;
+                }
+            }
+        }
+        .article-items:nth-child(3){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-soccer-team.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-soccer-team.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-soccer-team.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-soccer-team.jpg) no-repeat top center/ cover;
+                }
+            }
+        }
+        .article-items:nth-child(4){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-grid.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-grid.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-grid.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-grid.jpg) no-repeat top center/ cover;
+                }
+            }
+        }
+        .article-items:nth-child(5){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-from-above.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-from-above.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-from-above.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-from-above.jpg) no-repeat top center/ cover;
+                }
+            }
+        }
+        .article-items:nth-child(6){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-pocket-borealis.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-pocket-borealis.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-pocket-borealis.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-pocket-borealis.jpg) no-repeat top center/ cover;
+                }
+            }
+        }
+        .article-items:nth-child(7){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-curiosity.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-curiosity.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-curiosity.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-curiosity.jpg) no-repeat top center/ cover;
+                }
+            }
+        }
+        .article-items:nth-child(8){
+            min-height: 300px;
+            background: linear-gradient(rgba(0,0,0,.1)),url(../images/desktop/image-fisheye.jpg) no-repeat top center/ cover;
+
+            @include mq(600px){
+                background: linear-gradient(rgba(0,0,0,.1)),url(../images/mobile/image-fisheye.jpg) no-repeat top center/ cover;
+                min-height: 150px;
+            }
+
+             &:hover{
+                background: linear-gradient(rgba(201, 201, 201, 0.5)),url(../images/desktop/image-fisheye.jpg) no-repeat top center/ cover;
+
+                @include mq(600px){
+                    background: linear-gradient(rgba(200,201,201,.5)),url(../images/mobile/image-fisheye.jpg) no-repeat top center/ cover;
+                }
+            }
+            
+
+        }
+      
+    }
+    
+}
+
+//x Article x//

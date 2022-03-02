@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&family=Poppins&family=Public+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans&family=Open+Sans&family=Poppins&family=Public+Sans:wght@400;500&display=swap");
+@import "./basic";
+@import "./header";
+@import "./interactive";
+@import "./article";
+
+// Basic styling //
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.navlist.active{
+    transform: translateY(0px);
+}
+// .burger.opacity-hide{
+//     opacity: -1;
+//     z-index: -10000;
+// }
+// .cross.opacity-show{
+//     z-index: 10000;
+//     display: block;
+// }
+
+$Black: hsl(0, 0%, 0%);
+$Dark-Gray: hsl(0, 0%, 55%);
+$Very-Dark-Gray: hsl(0, 0%, 41%);
+$font-primary: 'Alata', sans-serif;
+$font-secondary:'Josefin Sans', sans-serif;
+
+
+ html{
+    font-family: $font-primary;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden
+}
+//x Basic styling x//
+
+
+// showcase//
+
+.showcase-container{
+    background: url(../images/desktop/image-hero.jpg) no-repeat center top/ cover;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include flexCenter;
+    justify-content: flex-start;
+    padding-left: 11%;
+    overflow-x: hidden;
+
+    @include mq(830px) {
+        background: url(../images/mobile/image-hero.jpg) no-repeat center/ cover;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    @include mq(500px) {
+       justify-content: center;
+    }
+
+    .showcase{
+        background: transparent;
+
+    }
+    h2{
+        color: white;
+        font-weight: 100;
+        border: 1px solid white;
+        padding: 20px 100px;
+        letter-spacing: 3px;
+        line-height: 1.2;
+        font-family: $font-secondary;
+        font-size: 2rem;
+
+        @include mq(600px) {
+            padding: 20px 50px;
+            text-align: center;
+            font-size: 1.8rem;
+         }
+    }
+}
+//x showcase x//
+
+// footer
+footer{
+    background: $Black;
+    padding: 30px 11%;
+
+
+    .footer-item1{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0px;
+
+        @include mq(600px){
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .footer-logo{
+            width: 100px;
+
+            @include mq(600px){
+                margin: 20px auto;
+            }
+            img{
+                max-width: 100%;
+            }
+        }
+
+        .footer-icons{
+            position: relative;
+            
+           i{
+               font-size: 20px;
+               margin-right: 20px;
+               color: white;
+               position: relative;
+               cursor: pointer;
+
+               &:hover::after{
+                width: 100%;
+            }
+            
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    right: 0;
+                    height: 3px;
+                    width: 0%;
+                    background-color: white;
+                    z-index: 1000;
+                    transition: all .3s ease-in-out;
+
+                    }
+           }
+        }
+    }
+    .footer-item2{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include mq(600px){
+            flex-direction: column;
+            align-items: center;
+        }
+     
+
+        .footer-links {
+          ul{
+              li{
+                @include mq(600px){
+                    margin: 20px 10px;
+                }
+                  a{
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    margin-right: 20px;
+                    color: white;
+                    font-size: 1rem;
+                    position: relative;
+                    cursor: pointer;
+
+                    @include mq(600px){
+                       font-size: .7rem;
+                    }
+                    @include mq(400px){
+                       font-size: .5rem;
+                    }
+                    
+            &:hover::after{
+                width: 50%;
+            }
+            
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 13px;
+                    bottom: -5px;
+                    right: 0;
+                    height: 3px;
+                    width: 0%;
+                    background-color: white;
+                    z-index: 1000;
+                    transition: all .3s ease-in-out;
+
+                    }
+                  }
+              }
+          }
+
+        }
+    }
+    .copyright{
+         p{
+            color: $Very-Dark-Gray;
+
+            @include mq(600px){
+               text-align: center;
+             }
+
+         }
+    }
+}
+    
+//x footer x//
+
+
+

@@ -1,0 +1,153 @@
+$Black: hsl(0, 0%, 0%);
+$Dark-Gray: hsl(0, 0%, 55%);
+$Very-Dark-Gray: hsl(0, 0%, 41%);
+$font-primary: 'Alata', sans-serif;
+$font-secondary:'Josefin Sans', sans-serif;
+
+// interactive
+.interaction-container{
+    margin-top:70px;
+    margin-left: 11%;
+    padding: 20px 0px;
+    // @include flexCenter;
+    display: flex;
+
+    @include mq(920px){
+        flex-direction: column;
+        margin-top: 800px;
+        margin-left:12;
+        justify-content: center;
+
+    }
+
+    @include mq(830px){
+        flex-direction: column;
+        margin-top: 500px;
+        margin-left:12;
+        justify-content: center;
+
+    }
+
+    @include mq(800px){
+        flex-direction: column;
+        margin-top: 400px;
+        margin-left:12;
+        justify-content: center;
+
+    }
+
+    @include mq(600px){
+        flex-direction: column;
+        margin-top: 300px;
+        margin-left:12;
+        justify-content: center;
+
+    }
+    @include mq(400px){
+        flex-direction: column;
+        margin-top: 250px;
+        margin-left:12;
+        justify-content: center;
+
+    }
+
+    .interaction-img{
+        width: 100%;
+
+        @include mq(830px){
+           width: 100%;
+        }
+
+
+         img{
+            max-width: 100%;
+            object-fit: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 49%, 78% 49%, 78% 100%, 0 99%, 0 28%);
+
+            @include mq(920px){
+                background: url(../images/mobile/image-interactive.jpg) no-repeat center /cover;
+                clip-path: inset(5% 20% 15% 10%);
+            }
+
+            @include mq(830px){
+                background: url(../images/mobile/image-interactive.jpg) no-repeat center /cover;
+                clip-path: inset(5% 20% 15% 10%);
+            }
+        
+        }
+
+    }
+        .interactive-info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;     
+            justify-content: flex-end;
+            position: relative;
+            left: -60px;
+            bottom: 20px;
+            width: 100%;
+
+            @include mq(920px){
+                text-align: center;
+                left: 0;
+                padding: 0px 50px;
+                bottom: 0px;
+            }
+
+            @include mq(830px){
+                text-align: center;
+                left: 0;
+                padding: 0px 20px;
+                bottom: 0px;
+            }
+
+
+            h2{
+                font-size: 1.5rem;
+                line-height: 1;
+                font-family: $font-primary;
+                font-weight: lighter;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+
+                @include mq(920px){
+                    font-size: 2.3rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                @include mq(830px){
+                    font-size: 2.3rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                @include mq(600px){
+                    font-size: 1.5rem;
+                    padding-right: 25px;
+                    font-weight: bold;
+                }
+
+            }
+            p{
+               padding-top: 30px;
+               padding-right: 10px;
+               color: $Dark-Gray ;
+               padding-right: 10px;
+               font-size: .90rem;
+
+               @include mq(920px){
+                font-size: 1.5rem;
+                padding-right: 100px;
+
+            }
+
+               @include mq(830px){
+                font-size: 1rem;
+                padding-right: 30px;
+
+            }
+
+        
+         }
+        }
+
+}

@@ -1,0 +1,20 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexStart {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+@mixin flexEnd {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+@mixin mq($size){
+    @media (max-width:$size) {
+        @content;
+    }
+}
